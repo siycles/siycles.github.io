@@ -3,236 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roblox Portfolio - siycles</title>
+    <meta name="theme-color" content="#100c18">
+    <meta name="description" content="Roblox creations, projects, and ways to work with siycles.">
+    <title>@siycles — Roblox creator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <header class="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <h1>siycles</h1>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#games" class="nav-link">Games</a></li>
-                <li><a href="#work" class="nav-link">Work</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
+            <a class="logo" href="#home" aria-label="siycles home">siycles<span>.</span></a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-menu" id="main-nav">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#games" class="nav-link">Games</a></li>
+                    <li><a href="#work" class="nav-link">Work</a></li>
+                    <li><a href="#partner" class="nav-link">Partner</a></li>
+                </ul>
+            </nav>
+            <a class="nav-contact" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+            <button class="hamburger" type="button" aria-label="Open navigation" aria-controls="main-nav" aria-expanded="false">
                 <span></span>
                 <span></span>
-                <span></span>
-            </div>
+            </button>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section - Card About Me -->
-    <section id="home" class="hero">
-        <div class="about-card">
-            <div class="card-glow"></div>
-            
-            <!-- Avatar -->
-            <div class="avatar-container">
-                <img src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-602BD38776487C429C864BA4517221A0-Png/512/512/AvatarHeadshot/Webp/noFilter" alt="siycles avatar" class="avatar">
-                <div class="avatar-ring"></div>
-            </div>
-
-            <!-- Name -->
-            <h1 class="card-name">siycles</h1>
-            
-            <!-- Title/Role -->
-            <p class="card-title">Roblox Developer & Creator</p>
-
-            <!-- Description -->
-            <p class="card-description">
-                Passionate about creating immersive gaming experiences with expertise in scripting, 3D modeling, and UI design. Let's build something amazing together!
-            </p>
-
-            <!-- Social Links -->
-            <div class="social-links">
-                <a href="https://twitter.com" target="_blank" class="social-btn" title="Twitter">
-                    <span>𝕏</span>
-                </a>
-                <a href="https://discord.com" target="_blank" class="social-btn" title="Discord">
-                    <span>💬</span>
-                </a>
-                <a href="https://github.com/siycles" target="_blank" class="social-btn" title="GitHub">
-                    <span>🔗</span>
-                </a>
-                <a href="https://roblox.com" target="_blank" class="social-btn" title="Roblox">
-                    <span>🎮</span>
-                </a>
-            </div>
-
-            <!-- Divider -->
-            <div class="card-divider"></div>
-
-            <!-- Down Arrow -->
-            <div class="scroll-indicator">
-                <p>View Portfolio</p>
-                <svg class="arrow-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Hi! I'm a passionate Roblox developer with expertise in game development, scripting, 3D modelling, and UI design. I create immersive experiences and help bring creative visions to life on the Roblox platform.</p>
-                    <p>With a strong foundation in Lua scripting and Roblox Studio, I specialize in building engaging gameplay systems, custom user interfaces, and detailed 3D models.</p>
-                </div>
-                <div class="skills">
-                    <h3>Skills</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Lua Scripting</span>
-                        <span class="skill-tag">Game Design</span>
-                        <span class="skill-tag">3D Modelling</span>
-                        <span class="skill-tag">UI/UX Design</span>
-                        <span class="skill-tag">Roblox Studio</span>
-                        <span class="skill-tag">Asset Creation</span>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-grid container">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="status-dot"></span> Roblox creator <span class="eyebrow-divider">/</span> open to collaborations</p>
+                    <h1>@<span>siycles</span></h1>
+                    <p class="hero-description">Building memorable worlds and experiences on Roblox. Here’s a little of what I make, what I’m into, and how we can create together.</p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#games">Explore my work <span aria-hidden="true">↘</span></a>
+                        <a class="button button-quiet" href="#contact">Partner with me <span aria-hidden="true">↗</span></a>
+                        <a href="https://www.roblox.com/search/users?keyword=siycles" target="_blank" rel="noreferrer">Roblox <span aria-hidden="true">↗</span></a>
+                        <a href="https://github.com/siycles" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                        <a href="https://x.com/" target="_blank" rel="noreferrer">X <span aria-hidden="true">↗</span></a>
+                        <a href="https://discord.gg/" target="_blank" rel="noreferrer">Discord <span aria-hidden="true">↗</span></a>
                     </div>
+                </div>
+                <div class="avatar-stage">
+                    <div class="avatar-frame">
+                        <div class="avatar-topline"><span>PLAYER PROFILE</span><span>001 / ROBLOX</span></div>
+                        <img class="avatar" src="https://tr.rbxcdn.com/30DAY-AvatarHeadshot-602BD38776487C429C864BA4517221A0-Png/420/420/AvatarHeadshot/Png/noFilter" alt="Roblox avatar for siycles">
+                        <div class="avatar-caption"><span class="avatar-spark" aria-hidden="true">✳</span><span><strong>siycles</strong><small>Creator profile</small></span><span class="avatar-arrow" aria-hidden="true">↗</span></div>
+                    </div>
+                    <span class="avatar-note">CURRENT AVATAR <span aria-hidden="true">✳</span></span>
                 </div>
             </div>
-        </div>
-    </section>
+            <a class="scroll-cue" href="#about"><span>Scroll to explore</span><span class="scroll-line" aria-hidden="true"></span></a>
+        </section>
 
-    <!-- Games Section -->
-    <section id="games" class="games">
-        <div class="container">
-            <h2>My Games</h2>
-            <div class="games-grid">
-                <div class="game-card">
-                    <div class="card-icon">🎮</div>
-                    <h3>Game Title 1</h3>
-                    <p>A description of your first game. Highlight the unique features and gameplay mechanics.</p>
-                    <a href="#" class="card-link">View Game →</a>
+        <section id="about" class="about section-block">
+            <div class="container about-layout">
+                <p class="section-index">01 <span>/</span> A LITTLE ABOUT ME</p>
+                <div class="about-copy">
+                    <h2>Good ideas deserve<br><span>a world of their own.</span></h2>
+                    <p>I’m siycles, a Roblox creator drawn to experiences with personality: the details, systems, and small moments that make a game feel alive. I’m always up for meeting good people and making something players want to come back to.</p>
+                    <div class="interest-list" aria-label="Creative interests">
+                        <span>Game systems</span><span>World building</span><span>Player experience</span>
+                    </div>
                 </div>
-                <div class="game-card">
-                    <div class="card-icon">🎯</div>
-                    <h3>Game Title 2</h3>
-                    <p>A description of your second game. Showcase what makes it special and engaging.</p>
-                    <a href="#" class="card-link">View Game →</a>
+                <div class="about-mark" aria-hidden="true"><span>SC</span><i></i><i></i><i></i></div>
+            </div>
+        </section>
+
+        <section id="games" class="games section-block">
+            <div class="container">
+                <div class="section-heading">
+                    <div><p class="section-index">02 <span>/</span> ON ROBLOX</p><h2>Games & experiences</h2></div>
+                    <p class="section-note">A few worlds from the studio.<br>More to come.</p>
                 </div>
-                <div class="game-card">
-                    <div class="card-icon">⭐</div>
-                    <h3>Game Title 3</h3>
-                    <p>A description of your third game. Tell visitors about the player experience.</p>
-                    <a href="#" class="card-link">View Game →</a>
-                </div>
-                <div class="game-card">
-                    <div class="card-icon">🏆</div>
-                    <h3>Game Title 4</h3>
-                    <p>A description of your fourth game. Explain the core concept and appeal.</p>
-                    <a href="#" class="card-link">View Game →</a>
+                <div class="games-grid">
+                    <article class="game-card">
+                        <div class="game-art art-one"><span class="art-label">EXPERIENCE 01</span><span class="art-title">YOUR<br>GAME</span><span class="art-corner" aria-hidden="true">↗</span><span class="art-edit">ADD GAME THUMBNAIL</span></div>
+                        <div class="game-details"><div><p class="card-kicker">FEATURED EXPERIENCE</p><h3>Game title goes here</h3><p class="card-description">Add a short description of your game and what makes it fun to play.</p></div><a class="text-link" href="#contact" aria-label="Ask siycles about this game">View project <span aria-hidden="true">↗</span></a></div>
+                    </article>
+                    <article class="game-card">
+                        <div class="game-art art-two"><span class="art-label">EXPERIENCE 02</span><span class="art-title">YOUR<br>WORLD</span><span class="art-corner" aria-hidden="true">↗</span><span class="art-edit">ADD GAME THUMBNAIL</span></div>
+                        <div class="game-details"><div><p class="card-kicker">ROBLOX EXPERIENCE</p><h3>Game title goes here</h3><p class="card-description">Share the hook, the feeling, or the feature players remember.</p></div><a class="text-link" href="#contact" aria-label="Ask siycles about this game">View project <span aria-hidden="true">↗</span></a></div>
+                    </article>
+                    <article class="game-card">
+                        <div class="game-art art-three"><span class="art-label">EXPERIENCE 03</span><span class="art-title">YOUR<br>IDEA</span><span class="art-corner" aria-hidden="true">↗</span><span class="art-edit">ADD GAME THUMBNAIL</span></div>
+                        <div class="game-details"><div><p class="card-kicker">IN DEVELOPMENT</p><h3>Game title goes here</h3><p class="card-description">Add another game, prototype, or experience you helped create.</p></div><a class="text-link" href="#contact" aria-label="Ask siycles about this game">View project <span aria-hidden="true">↗</span></a></div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Work Section -->
-    <section id="work" class="work">
-        <div class="container">
-            <h2>My Work</h2>
-            
-            <!-- Scripting -->
-            <div class="work-category">
-                <h3>Scripting</h3>
-                <div class="work-grid">
-                    <div class="work-item">
-                        <h4>📝 System 1</h4>
-                        <p>Description of your first scripting project. Explain the functionality and impact.</p>
-                    </div>
-                    <div class="work-item">
-                        <h4>📝 System 2</h4>
-                        <p>Description of your second scripting project. Highlight technical achievements.</p>
-                    </div>
-                    <div class="work-item">
-                        <h4>📝 System 3</h4>
-                        <p>Description of your third scripting project. Show problem-solving capabilities.</p>
-                    </div>
+        <section id="work" class="work section-block">
+            <div class="container">
+                <div class="section-heading">
+                    <div><p class="section-index">03 <span>/</span> THE PROCESS</p><h2>More than the finished game</h2></div>
+                    <p class="section-note">The pieces that turn<br>a pitch into a place.</p>
+                </div>
+                <div class="work-list">
+                    <article class="work-row"><span class="work-number">01</span><div><h3>Gameplay & systems</h3><p>Core loops, progression, and the mechanics that make each session feel rewarding.</p></div><span class="work-arrow" aria-hidden="true">↗</span></article>
+                    <article class="work-row"><span class="work-number">02</span><div><h3>Worlds with character</h3><p>Spaces with a clear mood, a sense of discovery, and room for players to make them theirs.</p></div><span class="work-arrow" aria-hidden="true">↗</span></article>
+                    <article class="work-row"><span class="work-number">03</span><div><h3>Polish & player experience</h3><p>Thoughtful interfaces and finishing touches that make a game feel complete.</p></div><span class="work-arrow" aria-hidden="true">↗</span></article>
                 </div>
             </div>
+        </section>
 
-            <!-- Modelling -->
-            <div class="work-category">
-                <h3>Modelling</h3>
-                <div class="work-grid">
-                    <div class="work-item">
-                        <h4>🎨 Model 1</h4>
-                        <p>Description of your first 3D model. Show your design aesthetic and creativity.</p>
-                    </div>
-                    <div class="work-item">
-                        <h4>🎨 Model 2</h4>
-                        <p>Description of your second model. Highlight detail and quality.</p>
-                    </div>
-                    <div class="work-item">
-                        <h4>🎨 Model 3</h4>
-                        <p>Description of your third model. Showcase variety in your work.</p>
-                    </div>
+        <section id="partner" class="partner section-block">
+            <div class="container">
+                <div class="section-heading partner-heading">
+                    <div><p class="section-index">04 <span>/</span> WHY PARTNER</p><h2>Better builds happen<br><span>when we build together.</span></h2></div>
+                    <p class="section-note">A good collaboration<br>should feel good to play.</p>
+                </div>
+                <div class="partner-grid">
+                    <article class="partner-point"><span class="partner-icon" aria-hidden="true">✳</span><h3>Players come first</h3><p>Start with how it should feel to play, then shape the features around that.</p></article>
+                    <article class="partner-point"><span class="partner-icon" aria-hidden="true">↗</span><h3>Build in the open</h3><p>Clear conversations and shared direction help turn a rough idea into a stronger one.</p></article>
+                    <article class="partner-point"><span class="partner-icon" aria-hidden="true">◎</span><h3>Care about the details</h3><p>From the first impression to the final polish, small choices make a world memorable.</p></article>
                 </div>
             </div>
+        </section>
 
-            <!-- UI Design -->
-            <div class="work-category">
-                <h3>UI Design</h3>
-                <div class="work-grid">
-                    <div class="work-item">
-                        <h4>🖼️ UI 1</h4>
-                        <p>Description of your first UI design. Explain the user experience focus.</p>
-                    </div>
-                    <div class="work-item">
-                        <h4>🖼️ UI 2</h4>
-                        <p>Description of your second UI design. Show your design thinking.</p>
-                    </div>
-                    <div class="work-item">
-                        <h4>🖼️ UI 3</h4>
-                        <p>Description of your third UI design. Highlight interface innovation.</p>
-                    </div>
-                </div>
+        <section id="contact" class="contact section-block">
+            <div class="container contact-layout">
+                <div><p class="section-index">05 <span>/</span> LET'S MAKE SOMETHING</p><h2>Have a good<br>one in mind?</h2></div>
+                <div class="contact-copy"><p>Looking for a creator to work with, a teammate for your next project, or just want to talk Roblox? Come say hi on Discord.</p><a class="button button-light" href="https://discord.gg/YOUR_INVITE" target="_blank" rel="noreferrer">Join my Discord <span aria-hidden="true">↗</span></a><span class="contact-note">Replace the invite link with your server invite.</span></div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p class="contact-subtitle">Interested in working together? Let's talk!</p>
-            
-            <form id="contactForm" class="contact-form">
-                <div class="form-group">
-                    <input type="text" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="submit-button">Send Message</button>
-            </form>
-
-            <div class="contact-info">
-                <p>📧 Email me directly or connect on social media</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 siycles Roblox Portfolio. All rights reserved.</p>
-            <p>Creating immersive Roblox experiences | Let's build something amazing together</p>
-        </div>
+        <div class="container footer-inner"><a class="footer-logo" href="#home">siycles<span>.</span></a><p>Made with intention on Roblox.</p><a class="back-top" href="#home">Back to top <span aria-hidden="true">↑</span></a></div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
