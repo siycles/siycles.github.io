@@ -21,7 +21,7 @@ html {
 body {
     background: linear-gradient(135deg, var(--darker-purple) 0%, var(--deep-purple) 50%, #3d0d6b 100%);
     color: var(--text-light);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Archivo Black', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     min-height: 100vh;
     position: relative;
@@ -54,16 +54,7 @@ body::before {
 }
 
 /* Navigation */
-.navbar {
-    background: rgba(26, 2, 53, 0.95);
-    backdrop-filter: blur(20px);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 2px solid rgba(199, 21, 133, 0.5);
-    box-shadow: 0 8px 32px rgba(199, 21, 133, 0.15);
-    animation: slideDown 0.6s ease;
-}
+
 
 @keyframes slideDown {
     from {
@@ -88,14 +79,14 @@ body::before {
 .logo h1 {
     color: var(--bright-magenta);
     font-size: 1.8rem;
-    text-shadow: 0 0 20px rgba(255, 20, 147, 0.6);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.671);
     letter-spacing: 2px;
     font-weight: 800;
     transition: all 0.3s ease;
 }
 
 .logo h1:hover {
-    text-shadow: 0 0 40px rgba(255, 20, 147, 0.9);
+    text-shadow: 0 0 40px rgba(114, 109, 112, 0.9);
     transform: scale(1.05);
 }
 
@@ -225,6 +216,12 @@ body::before {
     animation: slideInUp 0.8s ease 0.2s both;
     letter-spacing: 2px;
     font-weight: 500;
+}
+
+.symbol {
+  display: inline-block;
+  padding-right: 5px;
+  font-weight: bold;
 }
 
 .cta-button {
@@ -592,7 +589,7 @@ section h3 {
     border-radius: 8px;
     color: var(--text-light);
     font-size: 1rem;
-    font-family: inherit;
+    font-family: 'Archivo Black', sans-serif;
     transition: all 0.3s ease;
 }
 
@@ -699,7 +696,7 @@ section h3 {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
@@ -1124,7 +1121,7 @@ html {
 body {
     background: var(--ink);
     color: var(--paper);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Archivo Black', sans-serif;
     line-height: 1.65;
 }
 
@@ -1135,23 +1132,33 @@ body::before {
 }
 
 .navbar {
-    background: rgba(8, 6, 16, 0.92);
+    position: sticky;
+    top: 12px;
+    z-index: 1000;
+    margin-top: 12px;
+    background: rgba(8, 6, 16, 0);
+    background-clip: padding-box;
     border: 0;
-    border-bottom: 1px solid var(--line);
     box-shadow: none;
     animation: none;
+    transition: top 220ms ease;
 }
 
 .nav-container {
-    max-width: 1280px;
-    min-height: 76px;
+    max-width: 600px;
+    min-height: 60px;
     padding: 0 2.25rem;
+    border: 1px solid rgba(190, 171, 245, 0.15);
+    border-radius: 50px;
+    background: rgba(17, 12, 20, 0.733);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .logo,
 .footer-logo {
     color: var(--paper);
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Archivo Black', sans-serif;
     font-size: 1.3rem;
     font-weight: 700;
     text-decoration: none;
@@ -1159,7 +1166,12 @@ body::before {
 
 .logo span,
 .footer-logo span {
-    color: var(--pink);
+    color: var(--paper);
+}
+
+.logo:hover {
+    text-shadow: 0 0 40px rgba(114, 109, 112, 0.9);
+    transform: scale(1.05);
 }
 
 .nav-menu {
@@ -1192,6 +1204,8 @@ body::before {
     font-size: 0.84rem;
     font-weight: 600;
     text-decoration: none;
+    border: 2px solid var(--line);
+    border-radius: 50px;
 }
 
 .nav-contact span {
@@ -1241,7 +1255,23 @@ body::before {
 
 .hero-copy {
     max-width: 670px;
-    animation: fadeInUp 0.8s ease both;
+    animation: fadeInUp 0.3s ease both;
+}
+
+.handle-symbol {
+    h2 {
+        margin: 0 0 0.2rem -0.06em;
+        color: var(--paper);
+        background: none;
+        font-family: 'Archivo Black', sans-serif;
+        font-size: clamp(4rem, 6vw, 3.5rem);
+        line-height: 1.25;
+        letter-spacing: -3px;
+        -webkit-text-fill-color: transparent;
+        text-shadow: none;
+
+    }
+    font-weight: 700;
 }
 
 .eyebrow,
@@ -1263,7 +1293,7 @@ body::before {
     gap: 0.65rem;
     margin-bottom: 1.6rem;
     color: #d6cddd;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 .status-dot {
@@ -1271,7 +1301,7 @@ body::before {
     height: 7px;
     border-radius: 50%;
     background: var(--mint);
-    box-shadow: 0 0 12px rgba(150, 240, 209, 0.5);
+    box-shadow: 0 0 12px rgba(250, 169, 243, 0.5);
 }
 
 .eyebrow-divider,
@@ -1280,14 +1310,14 @@ body::before {
 }
 
 .hero h1 {
-    margin: 0 0 1rem -0.06em;
+    margin: 0 0 0rem -0.06em;
     color: var(--paper);
     background: none;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: clamp(5rem, 10vw, 9.5rem);
-    font-weight: 700;
-    line-height: 0.94;
-    letter-spacing: 0;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(8rem, 4vw, 4rem);
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -7px;
     -webkit-text-fill-color: transparent;
     text-shadow: none;
 }
