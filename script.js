@@ -32,6 +32,39 @@ const sectionObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('main section[id]').forEach((section) => sectionObserver.observe(section));
 
+const partnerSection = document.querySelector('#partner');
+
+if (partnerSection) {
+    const moneyRainObserver = new IntersectionObserver((entries, observer) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+
+        observer.disconnect();
+
+        const moneyRain = document.createElement('div');
+        moneyRain.className = 'money-rain';
+        moneyRain.setAttribute('aria-hidden', 'true');
+
+        for (let index = 0; index < 24; index += 1) {
+            const bill = document.createElement('span');
+            const startRotation = Math.round(Math.random() * 70 - 35);
+            bill.className = 'money-rain-bill';
+            bill.textContent = '$';
+            bill.style.left = `${Math.random() * 100}%`;
+            bill.style.setProperty('--drift', `${Math.round(Math.random() * 180 - 90)}px`);
+            bill.style.setProperty('--start-rotation', `${startRotation}deg`);
+            bill.style.setProperty('--end-rotation', `${startRotation + Math.round(Math.random() * 500 - 250)}deg`);
+            bill.style.setProperty('--fall-delay', `${Math.random() * 0.8}s`);
+            bill.style.setProperty('--fall-duration', `${2.5 + Math.random() * 0.9}s`);
+            moneyRain.append(bill);
+        }
+
+        document.body.append(moneyRain);
+        window.setTimeout(() => moneyRain.remove(), 5000);
+    }, { threshold: 0.15 });
+
+    moneyRainObserver.observe(partnerSection);
+}
+
 document.querySelectorAll('.work-gallery-toggle').forEach((button) => {
     const galleryArea = document.getElementById(button.getAttribute('aria-controls'));
     const label = button.querySelector('.work-gallery-toggle-label');
