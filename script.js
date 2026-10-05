@@ -32,6 +32,42 @@ const sectionObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('main section[id]').forEach((section) => sectionObserver.observe(section));
 
+const revealGroups = ['.about-cards', '.games-grid', '.work-list', '.partner-grid'];
+
+revealGroups.forEach((selector) => {
+    document.querySelectorAll(selector).forEach((group) => {
+        Array.from(group.children).forEach((element, index) => {
+            element.style.setProperty('--reveal-delay', `${Math.min(index, 4) * 90}ms`);
+        });
+    });
+});
+
+const revealTargets = document.querySelectorAll([
+    'main section:not(#home) .section-heading',
+    '.about-layout .about-copy',
+    '.about-highlights-heading',
+    '.about-card',
+    '.game-card',
+    '.work-row',
+    '.partner-point',
+    '.partner-cta',
+    '.contact-layout > div'
+].join(', '));
+
+const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+    });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+revealTargets.forEach((element) => {
+    element.classList.add('scroll-reveal');
+    revealObserver.observe(element);
+});
+
 const partnerSection = document.querySelector('#partner');
 
 if (partnerSection) {
